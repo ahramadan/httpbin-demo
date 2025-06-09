@@ -57,7 +57,9 @@ spec:
         http1MaxPendingRequests: 1
         maxRequestsPerConnection: 1
     outlierDetection:
-      consecutiveGatewayErrors: 1
+      consecutiveGatewayErrors: 10
+      splitExternalLocalOriginErrors: true
+      consecutiveLocalOriginFailures: 1
       consecutive5xxErrors: 0
       interval: 5s
       baseEjectionTime: 30s
