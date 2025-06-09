@@ -59,7 +59,7 @@ spec:
     outlierDetection:
       consecutiveGatewayErrors: 10
       splitExternalLocalOriginErrors: true
-      consecutiveLocalOriginFailures: 1
+      consecutiveLocalOriginFailures: 5
       consecutive5xxErrors: 0
       interval: 5s
       baseEjectionTime: 30s
