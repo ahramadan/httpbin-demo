@@ -56,9 +56,6 @@ spec:
       http:
         http2MaxRequests: 10
         http1MaxPendingRequests: 10
-      tcp:
-        maxConnections: 100
-        tcpBacklog: 50
     outlierDetection:
       consecutiveGatewayErrors: 10000
       consecutive5xxErrors: 0
