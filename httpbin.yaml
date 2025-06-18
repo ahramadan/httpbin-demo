@@ -6,6 +6,7 @@ metadata:
   labels:
     app: httpbin
 spec:
+  clusterIP: None  # CRITICAL CHANGE
   replicas: 3
   selector:
     matchLabels:
@@ -55,7 +56,7 @@ spec:
     connectionPool:
       http:
         http2MaxRequests: 10
-        http1MaxPendingRequests: 10
+        http1MaxPendingRequests: 20
     outlierDetection:
       consecutiveGatewayErrors: 10000
       consecutive5xxErrors: 0
