@@ -3,10 +3,10 @@ kind: Deployment
 metadata:
   name: httpbin
   namespace: default
+  clusterIP: None  # CRITICAL CHANGE
   labels:
     app: httpbin
 spec:
-  clusterIP: None  # CRITICAL CHANGE
   replicas: 3
   selector:
     matchLabels:
