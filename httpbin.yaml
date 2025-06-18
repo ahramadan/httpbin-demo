@@ -53,7 +53,7 @@ spec:
   trafficPolicy:
     connectionPool:
       http:
-        http2MaxRequests: 1
+        http2MaxRequests: 10
     outlierDetection:
       consecutiveGatewayErrors: 10
       consecutive5xxErrors: 0
