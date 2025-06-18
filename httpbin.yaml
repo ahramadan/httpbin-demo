@@ -55,7 +55,7 @@ spec:
       http:
         http2MaxRequests: 10
     outlierDetection:
-      consecutiveGatewayErrors: 10
+      consecutiveGatewayErrors: 10000
       consecutive5xxErrors: 0
       interval: 5s
       baseEjectionTime: 30s
