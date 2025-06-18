@@ -31,7 +31,6 @@ metadata:
   labels:
     app: httpbin
 spec:
-  clusterIP: None
   selector:
     app: httpbin
   ports:
@@ -51,6 +50,8 @@ spec:
       labels:
         version: v1
   trafficPolicy:
+    loadBalancer:
+      simple: ROUND_ROBIN  # Ensures even distribution across backend pods
     connectionPool:
       http:
         http2MaxRequests: 10
