@@ -53,22 +53,12 @@ spec:
         version: v1
   trafficPolicy:
     loadBalancer:
-      simple: LEAST_CONN  # Ensures even distribution across backend pods
+      simple: ROUND_ROBIN  # Ensures even distribution across backend pods
     connectionPool:
       tcp:
         maxConnections: 1
       http:
         http2MaxRequests: 10
         http1MaxPendingRequests: 0
+        maxRequestsPerConnection: 1
         idleTimeout: 15s
-    portLevelSettings:
-    - port:
-        number: 80
-      tls:
-        mode: DISABLE
-    outlierDetection:
-      consecutiveGatewayErrors: 10000
-      consecutive5xxErrors: 0
-      interval: 5s
-      baseEjectionTime: 30s
-      maxEjectionPercent: 100
