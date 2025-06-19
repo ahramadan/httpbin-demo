@@ -55,6 +55,8 @@ spec:
     loadBalancer:
       simple: LEAST_CONN  # Ensures even distribution across backend pods
     connectionPool:
+      tcp:
+        maxConnections: 1
       http:
         http2MaxRequests: 10
         http1MaxPendingRequests: 10
