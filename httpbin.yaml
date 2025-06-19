@@ -63,7 +63,7 @@ spec:
     - port:
         number: 80
       tls:
-        mode: DISABLE_TLS
+        mode: DISABLE
       http2ProtocolOptions: {}
     outlierDetection:
       consecutiveGatewayErrors: 10000
