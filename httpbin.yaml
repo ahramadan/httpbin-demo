@@ -59,7 +59,7 @@ spec:
         maxConnections: 1
       http:
         http2MaxRequests: 10
-        http1MaxPendingRequests: 1
+        http1MaxPendingRequests: 0
         idleTimeout: 15s
     portLevelSettings:
     - port:
