@@ -59,9 +59,8 @@ spec:
         maxConnections: 1
       http:
         http2MaxRequests: 10
-        http1MaxPendingRequests: 10
+        http1MaxPendingRequests: 1
         idleTimeout: 15s
-        h2UpgradePolicy: UPGRADE
     portLevelSettings:
     - port:
         number: 80
