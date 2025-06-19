@@ -36,7 +36,7 @@ spec:
   selector:
     app: httpbin
   ports:
-    - name: h2-http
+    - name: http
       port: 80
       targetPort: 80
 ---
