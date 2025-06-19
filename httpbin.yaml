@@ -59,12 +59,12 @@ spec:
         http2MaxRequests: 10
         http1MaxPendingRequests: 10
         idleTimeout: 15s
+        h2UpgradePolicy: UPGRADE
     portLevelSettings:
     - port:
         number: 80
       tls:
         mode: DISABLE
-      http2ProtocolOptions: {}
     outlierDetection:
       consecutiveGatewayErrors: 10000
       consecutive5xxErrors: 0
