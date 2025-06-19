@@ -20,15 +20,6 @@ spec:
       containers:
         - name: httpbin
           image: kennethreitz/httpbin
-          args: 
-          - gunicorn
-          - -b
-          - 0.0.0.0:80
-          - httpbin:app
-          - -w  # Worker count
-          - "10" # Set to 4 workers
-          - -k  # Worker type
-          - gevent # Async work
           ports:
             - containerPort: 80
 
@@ -45,7 +36,7 @@ spec:
   selector:
     app: httpbin
   ports:
-    - name: http
+    - name: h2-http
       port: 80
       targetPort: 80
 ---
