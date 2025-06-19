@@ -58,7 +58,13 @@ spec:
       http:
         http2MaxRequests: 10
         http1MaxPendingRequests: 10
-        idleTimeout: 15s 
+        idleTimeout: 15s
+    portLevelSettings:
+    - port:
+        number: 80
+      tls:
+        mode: DISABLE_TLS
+      http2ProtocolOptions: {}
     outlierDetection:
       consecutiveGatewayErrors: 10000
       consecutive5xxErrors: 0
