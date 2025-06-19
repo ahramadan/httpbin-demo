@@ -56,7 +56,8 @@ spec:
     connectionPool:
       http:
         http2MaxRequests: 10
-        http1MaxPendingRequests: 20
+        http1MaxPendingRequests: 10
+        idleTimeout: 15s 
     outlierDetection:
       consecutiveGatewayErrors: 10000
       consecutive5xxErrors: 0
