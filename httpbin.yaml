@@ -57,6 +57,3 @@ spec:
     connectionPool:
       http:
         http2MaxRequests: 10
-    inboundConnectionPool:
-      http:
-        http2MaxRequests: 10
