@@ -16,14 +16,6 @@ spec:
       labels:
         app: httpbin
         version: v1
-        annotations:
-        # Explicitly request sidecar injection
-           sidecar.istio.io/inject: "true"
-        # Override Envoy stats matcher so we get all cluster metrics:
-           proxy.istio.io/config: |-
-             proxyStatsMatcher:
-               inclusionRegexps:
-                 - ".*upstream_rq.*"
     spec:
       containers:
         - name: httpbin
