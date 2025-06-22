@@ -23,9 +23,8 @@ spec:
         proxy.istio.io/config: |-
           proxyStatsMatcher:
             inclusionRegexps:
-            - "^envoy_cluster_upstream_rq_active"
-            - "^envoy_cluster_upstream_rq_pending"
-            - "^envoy_cluster_upstream_rq_pending_overflow"
+            - ".*_upstream_rq_.*"
+            - ".*inbound.*"
     spec:
       containers:
         - name: httpbin
