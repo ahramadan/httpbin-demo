@@ -66,3 +66,9 @@ spec:
     connectionPool:
       http:
         http2MaxRequests: 10
+    outlierDetection:
+      consecutiveGatewayErrors: 3
+      consecutive5xxErrors: 0
+      interval: 5s
+      baseEjectionTime: 1m
+      maxEjectionPercent: 100
