@@ -41,7 +41,6 @@ metadata:
   labels:
     app: httpbin
 spec:
-  #clusterIP: None  # CRITICAL CHANGE
   selector:
     app: httpbin
   ports:
